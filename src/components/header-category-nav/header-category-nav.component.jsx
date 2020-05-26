@@ -11,13 +11,13 @@ const HeaderCategoryNav = () => (
       <NavListLinkStyled to="/swim">Swim</NavListLinkStyled>
     </li>
     <li>
-      <NavListLinkStyled href="#">Shoes</NavListLinkStyled>
+      <NavListLinkStyled to="/shoes">Shoes</NavListLinkStyled>
     </li>
     <li>
-      <NavListLinkStyled href="#">Hats</NavListLinkStyled>
+      <NavListLinkStyled to="/hats">Hats</NavListLinkStyled>
     </li>
     <li>
-      <NavListLinkStyled href="#">Shirts</NavListLinkStyled>
+      <NavListLinkStyled to="/shirts">Shirts</NavListLinkStyled>
     </li>
   </NavListStyled>
 );

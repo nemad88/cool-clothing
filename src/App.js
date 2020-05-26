@@ -1,10 +1,15 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+
 import "./App.scss";
+
 import Header from "./components/header/header.component";
 import HomePage from "./pages/homepage/homepage.component";
+import { selectCategoryNames } from "./redux/shop/shop.selector";
 
-function App() {
+const App = () => {
   return (
     <>
       <Header />
@@ -14,6 +19,10 @@ function App() {
       </Switch>
     </>
   );
-}
+};
 
-export default App;
+const mapStateToProps = createStructuredSelector({
+  categories: selectCategoryNames,
+});
+
+export default connect(mapStateToProps)(App);
