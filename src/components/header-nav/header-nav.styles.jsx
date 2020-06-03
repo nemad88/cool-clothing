@@ -5,8 +5,9 @@ import { ReactComponent as PersonIcon } from "../../assets/img/person.svg";
 import { ReactComponent as ShopbagIcon } from "../../assets/img/shopbag.svg";
 
 const commonStyle = css`
-  margin: 0 10px;
+  margin: 0 15px;
   width: 30px;
+  min-width: 30px;
   height: 30px;
   cursor: pointer;
   &:hover {
@@ -15,10 +16,13 @@ const commonStyle = css`
 `;
 
 export const HeaderNavContainer = styled.div`
-  flex: 1 1 20rem;
-  display: flex;
-  padding-right: 3rem;
+  grid-area: nav;  
+  display: flex;  
   justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 800px) {    
+    justify-content: flex-end;
+  }
 `;
 
 export const ShopBagIconStyled = styled(ShopbagIcon)`

@@ -12,7 +12,7 @@ export const HeroContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 155px);
+  height: calc(100vh - 150px);
 `;
 
 export const Title = styled.h1`

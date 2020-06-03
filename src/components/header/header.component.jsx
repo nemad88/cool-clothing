@@ -16,7 +16,7 @@ const Header = () => (
       <Logo />
       <HeaderSearch />
       <HeaderNav />
-      <Burger />
+
     </HeaderTopContainer>
     <HeaderCategoryNav />
     <BigButtons />

@@ -8,8 +8,11 @@ export const NavListStyled = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   transition: transform 1s ease;
+  
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const NavListLinkStyled = styled(Link)`

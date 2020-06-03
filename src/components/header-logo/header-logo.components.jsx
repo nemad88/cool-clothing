@@ -5,7 +5,7 @@ import { LogoContainer, LogoSvg } from "./header-logo.styles";
 
 const Logo = () => (
   <LogoContainer>
-    <Link to="/">
+    <Link to={process.env.PUBLIC_URL}>
       <LogoSvg />
     </Link>
   </LogoContainer>
