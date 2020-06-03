@@ -29,8 +29,8 @@ export const selectIsCategoriesLoaded = createSelector(
 );
 
 export const selectNavIsOpen = createSelector(
-    [selectShop],
-    (shop) => !!shop.navIsOpen
+  [selectShop],
+  (shop) => !!shop.navIsOpen
 );
 
 export const selectAllItemsAsArray = createSelector(
@@ -40,16 +40,16 @@ export const selectAllItemsAsArray = createSelector(
   }
 );
 
-export const selectHotItems = createSelector([selectAllItemsAsArray], (items) => {
-  return items.filter((item) => item.hot);
-});
+export const selectHotItems = createSelector(
+  [selectAllItemsAsArray],
+  (items) => {
+    return items.filter((item) => item.hot);
+  }
+);
 
 export const selectSearchResult = createSelector(
   [selectShop],
   (shop) => shop.searchResult
 );
 
-export const selectCart = createSelector(
-    [selectShop],
-    (shop) => shop.cart
-)
+export const selectCart = createSelector([selectShop], (shop) => shop.cart);

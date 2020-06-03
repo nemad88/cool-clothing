@@ -11,11 +11,11 @@ export const CustomImageButton = styled.button`
   top: 40%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  display: none;  
+  display: none;
   border: none;
   cursor: pointer;
 `;
 
 export const StyledComponents = {
-  CustomImageButton
-}
+  CustomImageButton,
+};

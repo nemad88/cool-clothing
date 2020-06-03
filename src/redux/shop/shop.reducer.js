@@ -10,7 +10,7 @@ const INITIAL_STATE = {
   cart: [],
   isFetching: false,
   errorMessage: undefined,
-  navIsOpen: false
+  navIsOpen: false,
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
@@ -35,8 +35,8 @@ const shopReducer = (state = INITIAL_STATE, action) => {
     case ShopActionTypes.ADD_ITEM_TO_CART:
       return {
         ...state,
-        cart: [...state.cart, action.payload]
-      }
+        cart: [...state.cart, action.payload],
+      };
     case ShopActionTypes.SEARCH_ITEM:
       return {
         ...state,
@@ -46,10 +46,11 @@ const shopReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
       };
-    case ShopActionTypes.TOGGLE_BURGER: return {
-      ...state,
-      navIsOpen: !state.navIsOpen
-    }
+    case ShopActionTypes.TOGGLE_BURGER:
+      return {
+        ...state,
+        navIsOpen: !state.navIsOpen,
+      };
     default:
       return state;
   }

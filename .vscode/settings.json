@@ -1,8 +1,8 @@
 {
-    "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#273209",
-        "titleBar.activeBackground": "#36460C",
-        "titleBar.activeForeground": "#F7FBEB"
-    }
+  "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#273209",
+    "titleBar.activeBackground": "#36460C",
+    "titleBar.activeForeground": "#F7FBEB"
+  }
 }

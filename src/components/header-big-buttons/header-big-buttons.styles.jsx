@@ -15,7 +15,7 @@ const buttonHover = css`
   }
 `;
 
-export const BigButtonsContainer = styled.div`
+export const BigButtons = styled.div`
   font-size: 2rem;
   display: flex;
   justify-content: center;
@@ -26,14 +26,20 @@ export const BigButtonsContainer = styled.div`
   }
 `;
 
-export const BigButtonMens = styled.div`
+export const MensButton = styled.div`
   ${buttonStyles}
   background-color: #0fceac;
   ${buttonHover}
 `;
 
-export const BigButtonWomens = styled.div`
+export const WomensButton = styled.div`
   ${buttonStyles}
   background-color: #ffa27a;
   ${buttonHover}
 `;
+
+export const StyledComponents = {
+  BigButtons,
+  MensButton,
+  WomensButton,
+};

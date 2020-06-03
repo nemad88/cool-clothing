@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const HeroContainer = styled.div`
-  height: 70vh;
+export const Hero = styled.div`
   min-height: 44rem;
   background: linear-gradient(70deg, #07a5888c, rgba(82, 82, 240, 0.144)),
-    url("http://adamgerman.hu/works/images/coolclothing/hero.jpg");
-  background-position: 50% 0;
+    url("http://adamgerman.hu/works/images/coolclothing/hero.jpg") 50% 0;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -15,7 +13,7 @@ export const HeroContainer = styled.div`
   height: calc(100vh - 150px);
 `;
 
-export const Title = styled.h1`
+export const HeroTitle = styled.h1`
   font-size: 5.6rem;
   font-weight: bold;
   letter-spacing: -1px;
@@ -23,7 +21,7 @@ export const Title = styled.h1`
   color: white;
 `;
 
-export const Subtitle = styled.h2`
+export const HeroSubtitle = styled.h2`
   font-size: 3rem;
   color: black;
   letter-spacing: 6px;
@@ -47,3 +45,10 @@ export const HeroButton = styled(Link)`
     box-shadow: 7px 10px 16px 2px rgba(0, 0, 0, 0.2);
   }
 `;
+
+export const StyledComponents = {
+  Hero,
+  HeroTitle,
+  HeroSubtitle,
+  HeroButton,
+};

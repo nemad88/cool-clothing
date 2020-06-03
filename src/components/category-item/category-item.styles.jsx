@@ -8,7 +8,7 @@ export const CategoryItem = styled.div`
   &:hover button {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
   }
 
   &:hover img {
@@ -24,6 +24,6 @@ export const CategoryItemTitle = styled.div`
 `;
 
 export const StyledComponents = {
-    CategoryItem,
-    CategoryItemTitle
-}
+  CategoryItem,
+  CategoryItemTitle,
+};

@@ -1,26 +1,25 @@
 import React from "react";
 
-import Logo from "../header-logo/header-logo.components";
-import HeaderNav from "../header-nav/header-nav.component";
-import Burger from "../header-burger/header-burger.component";
+import Logo from "../logo/logo.components";
+import HeaderTopNav from "../header-top-nav/header-top-nav.component";
 import HeaderCategoryNav from "../header-category-nav/header-category-nav.component";
 import BigButtons from "../header-big-buttons/header-big-buttons.components";
+import HeaderTop from "../header-top/header-top.component";
 
-import { HeaderSectionContainer, HeaderTopContainer } from "./header.styles";
+import { StyledComponents as S } from "./header.styles";
 
 import HeaderSearch from "../header-search/header-search.component";
 
 const Header = () => (
-  <HeaderSectionContainer>
-    <HeaderTopContainer>
+  <S.Header>
+    <HeaderTop>
       <Logo />
       <HeaderSearch />
-      <HeaderNav />
-
-    </HeaderTopContainer>
+      <HeaderTopNav />
+    </HeaderTop>
     <HeaderCategoryNav />
     <BigButtons />
-  </HeaderSectionContainer>
+  </S.Header>
 );
 
 export default Header;

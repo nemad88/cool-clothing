@@ -29,7 +29,10 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path={process.env.PUBLIC_URL} component={HomePage} />
-          <Route path={process.env.PUBLIC_URL+"/jackets"} render={() => <div>Jackets</div>} />
+          <Route
+            path={process.env.PUBLIC_URL + "/jackets"}
+            render={() => <div>Jackets</div>}
+          />
         </Switch>
       </>
     );

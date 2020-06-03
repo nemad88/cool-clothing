@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const BurgerMenu = styled.div`
   position: fixed;
@@ -9,13 +9,12 @@ const BurgerMenu = styled.div`
   background: red;
   width: 100%;
   height: 100%;
-  
+
   &.open {
-  display: block;
+    display: block;
   }
-  
-`
+`;
 
 export const StyledComponents = {
-    BurgerMenu
-}
+  BurgerMenu,
+};

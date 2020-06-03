@@ -36,8 +36,8 @@ export const fetchCategoriesStartAsync = () => {
 
 export const addItemToCart = (item) => ({
   type: ShopActionTypes.ADD_ITEM_TO_CART,
-  payload: item
-})
+  payload: item,
+});
 
 export const searchItems = (searchResult) => ({
   type: ShopActionTypes.SEARCH_ITEM,
@@ -49,5 +49,5 @@ export const clearSearch = {
 };
 
 export const toggleBurger = {
-  type: ShopActionTypes.TOGGLE_BURGER
-}
+  type: ShopActionTypes.TOGGLE_BURGER,
+};

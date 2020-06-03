@@ -10,7 +10,7 @@ export const HotItem = styled.div`
   &:hover button {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
   }
 
   &:hover img {
@@ -32,5 +32,5 @@ export const HotItemPrice = styled.div`
 export const StyledComponents = {
   HotItem,
   HotItemTitle,
-  HotItemPrice
-}
+  HotItemPrice,
+};

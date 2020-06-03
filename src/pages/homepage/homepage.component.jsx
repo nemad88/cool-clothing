@@ -9,7 +9,7 @@ import BurgerMenu from "../../components/burger-menu/burger-menu.component";
 const Homepage = () => {
   return (
     <div>
-        <BurgerMenu/>
+      <BurgerMenu />
       <Hero />
       <CategoriesOverviewContainer />
       <Hot />

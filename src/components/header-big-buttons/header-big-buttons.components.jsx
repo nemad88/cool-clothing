@@ -1,16 +1,12 @@
 import React from "react";
 
-import {
-  BigButtonsContainer,
-  BigButtonMens,
-  BigButtonWomens,
-} from "./header-big-buttons.styles";
+import { StyledComponents as S } from "./header-big-buttons.styles";
 
 const BigButtons = () => (
-  <BigButtonsContainer>
-    <BigButtonMens>mens</BigButtonMens>
-    <BigButtonWomens>womens</BigButtonWomens>
-  </BigButtonsContainer>
+  <S.BigButtons>
+    <S.MensButton>mens</S.MensButton>
+    <S.WomensButton>womens</S.WomensButton>
+  </S.BigButtons>
 );
 
 export default BigButtons;

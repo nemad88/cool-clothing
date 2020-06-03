@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { LogoContainer, LogoSvg } from "./header-logo.styles";
+import { StyledComponents as S } from "./logo.styles";
 
 const Logo = () => (
-  <LogoContainer>
+  <S.LogoContainer>
     <Link to={process.env.PUBLIC_URL}>
-      <LogoSvg />
+      <S.Logo />
     </Link>
-  </LogoContainer>
+  </S.LogoContainer>
 );
 
 export default Logo;

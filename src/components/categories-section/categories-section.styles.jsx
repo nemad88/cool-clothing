@@ -13,7 +13,6 @@ export const CategoryList = styled.div`
 `;
 
 export const StyledComponents = {
-    CategoriesSection,
-    CategoryList
-}
-
+  CategoriesSection,
+  CategoryList,
+};

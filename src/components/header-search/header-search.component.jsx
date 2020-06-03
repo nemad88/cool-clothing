@@ -1,11 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import {
-  HeaderSearchContainer,
-  InputSyled,
-  MagnifyStyled,
-} from "./header-search.styles";
+import { StyledComponents as S } from "./header-search.styles";
 
 import { searchItems, clearSearch } from "../../redux/shop/shop.actions";
 
@@ -40,16 +36,16 @@ class HeaderSearch extends React.Component {
 
   render() {
     return (
-      <HeaderSearchContainer>
-        <InputSyled
+      <S.HeaderSearch>
+        <S.SearchField
           placeholder="search product"
           name="searchFor"
           onChange={this.handleChange}
           type="search"
         />
-        <MagnifyStyled />
+        <S.MagnifyIcon />
         {this.state.visible ? <SearchResultBox /> : null}
-      </HeaderSearchContainer>
+      </S.HeaderSearch>
     );
   }
 }

@@ -14,5 +14,5 @@ export const HotList = styled.div`
 
 export const StyledComponents = {
   HotList,
-  HotSection
-}
+  HotSection,
+};
