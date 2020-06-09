@@ -34,20 +34,4 @@ export const fetchCategoriesStartAsync = () => {
   };
 };
 
-export const addItemToCart = (item) => ({
-  type: ShopActionTypes.ADD_ITEM_TO_CART,
-  payload: item,
-});
 
-export const searchItems = (searchResult) => ({
-  type: ShopActionTypes.SEARCH_ITEM,
-  payload: searchResult,
-});
-
-export const clearSearch = {
-  type: ShopActionTypes.CLEAR_SEARCH,
-};
-
-export const toggleBurger = {
-  type: ShopActionTypes.TOGGLE_BURGER,
-};

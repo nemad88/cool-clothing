@@ -1,62 +1,60 @@
-import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { StyledComponents as S } from "./header-search.styles";
 
-import { searchItems, clearSearch } from "../../redux/shop/shop.actions";
+import { searchItems, clearSearch } from "../../redux/search/search.actions";
 
-import { selectAllItemsAsArray } from "../../redux/shop/shop.selector";
+import { selectSearchedItems } from "../../redux/search/search.selector";
 
 import SearchResultBox from "../search-result-box/search-result-box.component";
 
-class HeaderSearch extends React.Component {
-  state = {
-    searchFor: "",
-    visible: false,
+const HeaderSearch = () => {
+  const [searchFor, setSearchFor] = useState("");
+  const [searchBoxVisible, setSearchBoxVisible] = useState(false);
+  const [isClearIconVisible, setIsClearIconVisible] = useState(false);
+  const dispatch = useDispatch();
+  const allItem = useSelector(selectSearchedItems(searchFor));
+
+  const handleChange = (event) => {
+    setSearchFor(event.target.value);
   };
 
-  handleChange = (event) => {
-    const { allItems, searchItems, clearSearch } = this.props;
-    const { value, name } = event.target;
+  const handleClearSearch = () => {
+    setSearchFor("");
+    dispatch(clearSearch);
+  };
 
-    if (value.length >= 3) {
-      this.setState({ [name]: value, visible: true }, () => {
-        const { searchFor } = this.state;
-        let filtered = allItems.filter((item) =>
-          item.name.toLowerCase().includes(searchFor.toLowerCase())
-        );
-        searchItems(filtered);
-      });
+  useEffect(() => {
+    if (searchFor.length > 0) {
+      setIsClearIconVisible(true);
     } else {
-      this.setState({ visible: false }, () => {
-        clearSearch();
-      });
+      setIsClearIconVisible(false);
     }
-  };
 
-  render() {
-    return (
-      <S.HeaderSearch>
-        <S.SearchField
-          placeholder="search product"
-          name="searchFor"
-          onChange={this.handleChange}
-          type="search"
-        />
-        <S.MagnifyIcon />
-        {this.state.visible ? <SearchResultBox /> : null}
-      </S.HeaderSearch>
-    );
-  }
-}
+    if (searchFor.length >= 3) {
+      setSearchBoxVisible(true);
+      dispatch(searchItems(allItem));
+    } else {
+      setSearchBoxVisible(false);
+    }
+  }, [setIsClearIconVisible, allItem, dispatch, searchFor]);
 
-const mapDispatchToProps = (dispatch) => ({
-  searchItems: (searchText) => dispatch(searchItems(searchText)),
-  clearSearch: () => dispatch(clearSearch),
-});
-
-const mapStateToProps = createStructuredSelector({
-  allItems: selectAllItemsAsArray,
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderSearch);
+  return (
+    <S.HeaderSearch>
+      <S.SearchField
+        placeholder="search product"
+        name="searchFor"
+        onChange={handleChange}
+        type="search"
+        value={searchFor}
+      />
+      {searchBoxVisible ? <SearchResultBox /> : null}
+      <S.MagnifyIcon />
+      <S.CloseIcon
+        className={isClearIconVisible ? "active" : null}
+        onClick={handleClearSearch}
+      />
+    </S.HeaderSearch>
+  );
+};
+export default HeaderSearch;

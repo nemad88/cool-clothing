@@ -16,6 +16,17 @@ export const HotItem = styled.div`
   &:hover img {
     filter: blur(1px);
   }
+
+  &:active button {
+    background: white;
+    color: black;
+  }
+
+  @media screen and (max-width: 800px) {
+    &:hover img {
+      filter: blur(0px);
+    }
+  }
 `;
 
 export const HotItemTitle = styled.h2`

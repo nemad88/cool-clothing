@@ -6,11 +6,8 @@ import ShopActionTypes from "./shop.types";
 
 const INITIAL_STATE = {
   categories: null,
-  searchResult: [],
-  cart: [],
-  isFetching: false,
+  isFetching: true,
   errorMessage: undefined,
-  navIsOpen: false,
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
@@ -32,20 +29,7 @@ const shopReducer = (state = INITIAL_STATE, action) => {
         isFetching: false,
         errorMessage: action.payload,
       };
-    case ShopActionTypes.ADD_ITEM_TO_CART:
-      return {
-        ...state,
-        cart: [...state.cart, action.payload],
-      };
-    case ShopActionTypes.SEARCH_ITEM:
-      return {
-        ...state,
-        searchResult: action.payload,
-      };
-    case ShopActionTypes.CLEAR_SEARCH:
-      return {
-        ...state,
-      };
+
     case ShopActionTypes.TOGGLE_BURGER:
       return {
         ...state,

@@ -14,6 +14,12 @@ export const CategoryItem = styled.div`
   &:hover img {
     filter: blur(1px);
   }
+
+  @media screen and (max-width: 800px) {   
+    &:hover img {
+      filter: blur(0px);
+    }
+  }
 `;
 export const CategoryItemTitle = styled.div`
   text-align: center;

@@ -14,19 +14,16 @@ export const BurgerIcon = styled.div`
   cursor: pointer;
   margin: 2rem;
 
-  @media screen and (max-width: 578px) {
-  }
-
   @media screen and (max-width: 800px) {
     display: block;
-    z-index: 99;
+    z-index: 999;
   }
 `;
 
 export const BurgerIconSpan1 = styled.span`
   &.toggle {
     transform: rotateZ(45deg) translateY(300%);
-    background: green;
+    background: black;
   }
   ${commonSpanStyle}
 `;
@@ -41,7 +38,7 @@ export const BurgerIconSpan2 = styled.span`
 export const BurgerIconSpan3 = styled.span`
   &.toggle {
     transform: rotateZ(-45deg) translateY(-310%);
-    background: green;
+    background: black;
   }
   ${commonSpanStyle}
 `;

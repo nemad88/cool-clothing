@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const NavList = styled.ul`
+  width: 100%;
   font-size: 1.6em;
   background: #f5f5f5;
   list-style: none;

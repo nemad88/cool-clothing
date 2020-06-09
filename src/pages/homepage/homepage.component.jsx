@@ -1,17 +1,18 @@
 import React from "react";
 
 import Hero from "../../components/hero/hero.component";
-import CategoriesOverviewContainer from "../../components/categories-section/categories-section.container";
+import CategoriesSectionContainer from "../../components/categories-section/categories-section.container";
 import Hot from "../../components/hot-section/hot-section.component";
 import Footer from "../../components/footer/footer.component";
-import BurgerMenu from "../../components/burger-menu/burger-menu.component";
+
+import CartBox from "../../components/cart-box/cart-box.component";
 
 const Homepage = () => {
   return (
     <div>
-      <BurgerMenu />
+      <CartBox />      
       <Hero />
-      <CategoriesOverviewContainer />
+      <CategoriesSectionContainer />
       <Hot />
       <Footer />
     </div>

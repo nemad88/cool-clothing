@@ -7,6 +7,7 @@ import { GlobalStyle } from "./global.styles";
 
 import Header from "./components/header/header.component";
 import HomePage from "./pages/homepage/homepage.component";
+import Category from "./pages/category/category.component";
 
 import { fetchCategoriesStartAsync } from "./redux/shop/shop.actions";
 
@@ -22,6 +23,11 @@ class App extends React.Component {
     fetchCategories();
   }
 
+  componentDidUpdate() {
+    const { fetchCategories } = this.props;
+    fetchCategories();
+  }
+
   render() {
     return (
       <>
@@ -30,8 +36,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path={process.env.PUBLIC_URL} component={HomePage} />
           <Route
-            path={process.env.PUBLIC_URL + "/jackets"}
-            render={() => <div>Jackets</div>}
+            path={process.env.PUBLIC_URL + "/categories/:slug"}
+            component={Category}
           />
         </Switch>
       </>

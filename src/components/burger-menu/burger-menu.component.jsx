@@ -1,17 +1,36 @@
 import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import { useSelector, useDispatch } from "react-redux";
 
 import { StyledComponents as S } from "./burger-menu.styles";
 
-import { selectNavIsOpen } from "../../redux/shop/shop.selector";
+import { selectCategoriesAsArray } from "../../redux/shop/shop.selector";
+import { selectBurgerMenuIsOpen } from "../../redux/burger/burger.selector";
 
-const BurgerMenu = ({ isOpen }) => (
-  <S.BurgerMenu className={isOpen ? "open" : null}>sanyi</S.BurgerMenu>
-);
+import { toggleBurger } from "../../redux/burger/burger.actions";
 
-const mapStateToProps = createStructuredSelector({
-  isOpen: selectNavIsOpen,
-});
+import {} from "../../redux/burger/burger.actions";
 
-export default connect(mapStateToProps)(BurgerMenu);
+const BurgerMenu = () => {
+  const categories = useSelector(selectCategoriesAsArray);
+  const burgerMenuIsOpen = useSelector(selectBurgerMenuIsOpen);
+
+  const dispatch = useDispatch();
+
+  const burgerMenuLinks = categories.map(({ routeName, title }) => (
+    <S.MenuItem
+      key={routeName}
+      to={process.env.PUBLIC_URL + "/categories/" + routeName}
+      onClick={() => dispatch(toggleBurger())}
+    >
+      {title}
+    </S.MenuItem>
+  ));
+
+  return (
+    <S.BurgerMenu className={burgerMenuIsOpen ? "open" : null}>
+      {burgerMenuLinks}
+    </S.BurgerMenu>
+  );
+};
+
+export default BurgerMenu;

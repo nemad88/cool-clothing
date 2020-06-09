@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Hero = styled.div`
+  margin-top: 150px;
   min-height: 44rem;
   background: linear-gradient(70deg, #07a5888c, rgba(82, 82, 240, 0.144)),
     url("http://adamgerman.hu/works/images/coolclothing/hero.jpg") 50% 0;
@@ -11,6 +12,10 @@ export const Hero = styled.div`
   justify-content: center;
   align-items: center;
   height: calc(100vh - 150px);
+
+  @media screen and (max-width: 800px) {
+    margin-top: 120px;
+  }
 `;
 
 export const HeroTitle = styled.h1`

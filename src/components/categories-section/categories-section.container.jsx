@@ -2,20 +2,18 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 
 import { createStructuredSelector } from "reselect";
-
-import CategoriesOverviewComponent from "./categories-section.component";
-
 import { selectIsCategoriesFetching } from "../../redux/shop/shop.selector";
 
+import CategoriesSection from "./categories-section.component";
 import WithSpinner from "../with-spinner/with-spinner.component";
 
 const mapStateToProps = createStructuredSelector({
   isLoading: selectIsCategoriesFetching,
 });
 
-const CategoriesOverview = compose(
+const CategoriesSectionContainer = compose(
   connect(mapStateToProps),
   WithSpinner
-)(CategoriesOverviewComponent);
+)(CategoriesSection);
 
-export default CategoriesOverview;
+export default CategoriesSectionContainer;

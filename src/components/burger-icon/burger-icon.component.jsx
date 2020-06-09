@@ -1,43 +1,25 @@
 import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import { useDispatch, useSelector } from "react-redux";
 
 import { StyledComponents as S } from "./burger-icon.styles";
 
-import { selectNavIsOpen } from "../../redux/shop/shop.selector";
-import { toggleBurger } from "../../redux/shop/shop.actions";
+import { selectBurgerMenuIsOpen } from "../../redux/burger/burger.selector";
+import { toggleBurger } from "../../redux/burger/burger.actions";
 
-class BurgerIcon extends React.Component {
-  state = {
-    toggle: false,
-  };
+const BurgerIcon = () => {
+  const burgerIsOpen = useSelector(selectBurgerMenuIsOpen);
+  const dispatch = useDispatch();
 
-  render() {
-    return (
-      <S.BurgerIcon
-        onClick={() => {
-          this.props.toggleBurgerMenu();
-          this.setState((prevState) => {
-            return {
-              toggle: !prevState.toggle,
-            };
-          });
-        }}
-      >
-        <S.BurgerIconSpan1 className={this.state.toggle ? "toggle" : null} />
-        <S.BurgerIconSpan2 className={this.state.toggle ? "toggle" : null} />
-        <S.BurgerIconSpan3 className={this.state.toggle ? "toggle" : null} />
-      </S.BurgerIcon>
-    );
-  }
-}
+  return (
+    <S.BurgerIcon
+      onClick={() => dispatch(toggleBurger())}
+      className={burgerIsOpen ? "open" : null}
+    >
+      <S.BurgerIconSpan1 className={burgerIsOpen ? "toggle" : null} />
+      <S.BurgerIconSpan2 className={burgerIsOpen ? "toggle" : null} />
+      <S.BurgerIconSpan3 className={burgerIsOpen ? "toggle" : null} />
+    </S.BurgerIcon>
+  );
+};
 
-const mapStateToProps = createStructuredSelector({
-  navIsOpen: selectNavIsOpen,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  toggleBurgerMenu: () => dispatch(toggleBurger),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(BurgerIcon);
+export default BurgerIcon;

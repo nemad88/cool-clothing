@@ -16,6 +16,7 @@ const buttonHover = css`
 `;
 
 export const BigButtons = styled.div`
+  width: 100%;
   font-size: 2rem;
   display: flex;
   justify-content: center;

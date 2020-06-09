@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { StyledComponents as S } from "./search-result-item.styles";
 import CustomImage from "../custom-image/custom-image.component";
-import { addItemToCart } from "../../redux/shop/shop.actions";
+import { addItemToCart } from "../../redux/cart/cart.actions";
 
 const SearchResultItem = ({ item, addItem }) => {
   const { imageUrl, name, price } = item;

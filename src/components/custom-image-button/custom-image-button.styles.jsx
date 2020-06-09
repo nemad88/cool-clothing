@@ -8,12 +8,22 @@ export const CustomImageButton = styled.button`
   width: 80%;
   height: 70px;
   text-align: center;
-  top: 40%;
+  bottom: 40%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   display: none;
   border: none;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: block;
+    bottom: 10%;
+    justify-content: center;
+  }
 `;
 
 export const StyledComponents = {
