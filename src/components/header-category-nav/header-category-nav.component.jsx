@@ -11,9 +11,7 @@ const HeaderCategoryNav = ({ categories }) => {
     <S.NavList>
       {categories.map(({ routeName, title }) => (
         <li key={routeName}>
-          <S.NavListLink
-            to={process.env.PUBLIC_URL + "/categories/" + routeName}
-          >
+          <S.NavListLink to={"/cool-clothing/categories/" + routeName}>
             {title}
           </S.NavListLink>
         </li>

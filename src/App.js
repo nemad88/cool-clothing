@@ -34,9 +34,11 @@ class App extends React.Component {
         <GlobalStyle />
         <Header />
         <Switch>
-          <Route exact path={process.env.PUBLIC_URL} component={HomePage} />
+          <Route exact path="/cool-clothing" component={HomePage} />
+
           <Route
-            path={process.env.PUBLIC_URL + "/categories/:slug"}
+            exact
+            path="/cool-clothing/categories/:slug"
             component={Category}
           />
         </Switch>
