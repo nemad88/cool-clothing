@@ -11,11 +11,15 @@ export const CategoryItem = styled.div`
     align-items: center;
   }
 
-  &:hover img {
-    filter: blur(1px);
+  img {
+    transition: all 1s ease-out;
   }
 
-  @media screen and (max-width: 800px) {   
+  &:hover img {
+    filter: blur(2px);
+  }
+
+  @media screen and (max-width: 800px) {
     &:hover img {
       filter: blur(0px);
     }

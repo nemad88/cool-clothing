@@ -4,12 +4,13 @@ import { ReactComponent as Plus } from "../../assets/img/plus-filled.svg";
 
 const iconMixin = css`
   width: 30px;
+  margin: 1rem;
 `;
 
 export const CartBoxItem = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr;
-  margin-top: 10px;
+  padding: 1rem;
 `;
 
 export const CartBoxItemDetails = styled.div`
@@ -27,7 +28,6 @@ const CartBoxItemTitle = styled.h3`
 const CartBoxItemLine = styled.h4`
   text-align: center;
   font-size: 1.2rem;
-  margin: 1rem;
 `;
 
 const QuantityBox = styled.div`

@@ -19,7 +19,7 @@ const BurgerMenu = () => {
   const burgerMenuLinks = categories.map(({ routeName, title }) => (
     <S.MenuItem
       key={routeName}
-      to={process.env.PUBLIC_URL + "/categories/" + routeName}
+      to={"/categories/" + routeName}
       onClick={() => dispatch(toggleBurger())}
     >
       {title}

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CategoryPage = styled.div`
+export const CheckoutPage = styled.div`
   margin-top: 18rem;
 
   @media screen and (max-width: 800px) {
@@ -9,5 +9,5 @@ export const CategoryPage = styled.div`
 `;
 
 export const StyledComponents = {
-  CategoryPage,
+  CheckoutPage,
 };

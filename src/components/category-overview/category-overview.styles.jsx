@@ -5,12 +5,6 @@ export const CategoryOverview = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 8rem 0rem;
-  margin-top: 150px;
-
-  @media screen and (max-width: 800px) {
-    margin-top: 80px;
-  }
 `;
 
 export const CategoryItemsList = styled.div`
@@ -29,8 +23,22 @@ export const ProductItem = styled.div`
 
   margin: 1rem;
 
+  img {
+    transition: all 1s ease-out;
+  }
+
+  &:hover img {
+    filter: blur(2px);
+  }
+
   &:hover button {
     display: block;
+  }
+
+  @media screen and (max-width: 800px) {
+    &:hover img {
+      filter: blur(0px);
+    }
   }
 `;
 

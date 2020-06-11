@@ -13,8 +13,12 @@ export const HotItem = styled.div`
     align-items: center;
   }
 
+  img {
+    transition: all 1s ease-out;
+  }
+
   &:hover img {
-    filter: blur(1px);
+    filter: blur(2px);
   }
 
   &:active button {

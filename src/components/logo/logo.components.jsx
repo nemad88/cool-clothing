@@ -5,7 +5,7 @@ import { StyledComponents as S } from "./logo.styles";
 
 const Logo = () => (
   <S.LogoContainer>
-    <Link to={process.env.PUBLIC_URL}>
+    <Link to={"/"}>
       <S.Logo />
     </Link>
   </S.LogoContainer>

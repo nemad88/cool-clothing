@@ -9,7 +9,7 @@ import CustomImage from "../custom-image/custom-image.component";
 const CategoryItem = ({ title, imageUrl, routeName }) => {
   return (
     <S.CategoryItem>
-      <Link to={"/cool-clothing/categories/" + routeName}>
+      <Link to={"/categories/" + routeName}>
         <CustomImage imageUrl={imageUrl} customWidth="28rem" alt="" />
         <S.CategoryItemTitle>{title}</S.CategoryItemTitle>
         <JumpButton>JUMP</JumpButton>

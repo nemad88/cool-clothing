@@ -8,6 +8,7 @@ import { GlobalStyle } from "./global.styles";
 import Header from "./components/header/header.component";
 import HomePage from "./pages/homepage/homepage.component";
 import Category from "./pages/category/category.component";
+import Checkout from "./pages/checkout/checkout.component";
 
 import { fetchCategoriesStartAsync } from "./redux/shop/shop.actions";
 
@@ -34,13 +35,9 @@ class App extends React.Component {
         <GlobalStyle />
         <Header />
         <Switch>
-          <Route exact path="/cool-clothing" component={HomePage} />
-
-          <Route
-            exact
-            path="/cool-clothing/categories/:slug"
-            component={Category}
-          />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/categories/:slug" component={Category} />
+          <Route exact path="/checkout" component={Checkout} />
         </Switch>
       </>
     );
