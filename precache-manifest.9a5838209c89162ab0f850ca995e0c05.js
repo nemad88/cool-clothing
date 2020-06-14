@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7cbd02994b194be4dd3fa53631114574",
+    "revision": "a820af2e6e7d2a5b85468f2fc0418ed9",
     "url": "/cool-clothing/index.html"
   },
   {
-    "revision": "81d47ed6d545f0282a52",
+    "revision": "48bd725fd2db42b9817d",
     "url": "/cool-clothing/static/css/main.fb5e79b7.chunk.css"
   },
   {
@@ -16,24 +16,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cool-clothing/static/js/2.19826fab.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "81d47ed6d545f0282a52",
-    "url": "/cool-clothing/static/js/main.605bb3a4.chunk.js"
+    "revision": "48bd725fd2db42b9817d",
+    "url": "/cool-clothing/static/js/main.6c91141b.chunk.js"
   },
   {
     "revision": "5e2af9d2b4210fe2aa91",
     "url": "/cool-clothing/static/js/runtime-main.cdd42ff3.js"
   },
   {
-    "revision": "1219ab733278eb6b0e9591fd8e25b1ce",
-    "url": "/cool-clothing/static/media/Logo.1219ab73.svg"
+    "revision": "619de632173123e8b6191ab46090f2ac",
+    "url": "/cool-clothing/static/media/LogoNew.619de632.svg"
   },
   {
     "revision": "f215d97107847641116260d3e4c38f71",
     "url": "/cool-clothing/static/media/close.f215d971.svg"
-  },
-  {
-    "revision": "dda4958f2258d01702162f88396cd6dd",
-    "url": "/cool-clothing/static/media/favorites.dda4958f.svg"
   },
   {
     "revision": "e19509aa015546c2dc9a14b325827efc",
