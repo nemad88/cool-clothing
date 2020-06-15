@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a820af2e6e7d2a5b85468f2fc0418ed9",
+    "revision": "5b3e70ab563420b0610841ea6a206688",
     "url": "/cool-clothing/index.html"
   },
   {
-    "revision": "48bd725fd2db42b9817d",
+    "revision": "1a4c1187c8c1d9decd84",
     "url": "/cool-clothing/static/css/main.fb5e79b7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cool-clothing/static/js/2.19826fab.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "48bd725fd2db42b9817d",
-    "url": "/cool-clothing/static/js/main.6c91141b.chunk.js"
+    "revision": "1a4c1187c8c1d9decd84",
+    "url": "/cool-clothing/static/js/main.f1ed040d.chunk.js"
   },
   {
     "revision": "5e2af9d2b4210fe2aa91",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5333bb5624c67279c00853369062f546",
     "url": "/cool-clothing/static/media/plus-filled.5333bb56.svg"
+  },
+  {
+    "revision": "5dd9d0edb754a92416e676cd73427df6",
+    "url": "/cool-clothing/static/media/sad.5dd9d0ed.svg"
   },
   {
     "revision": "cd7a66c915ad21fe2fa9d4328f361577",
