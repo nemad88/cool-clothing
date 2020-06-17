@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8d153e8cf4f6e7aac3115f82437946eb",
+    "revision": "d547bfaa86c611b1c715fc8220e95b43",
     "url": "/cool-clothing/index.html"
   },
   {
-    "revision": "c19b2fc281480593e599",
+    "revision": "d8e198366780d3edfdc8",
     "url": "/cool-clothing/static/css/main.fb5e79b7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cool-clothing/static/js/2.5b74c2d3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c19b2fc281480593e599",
-    "url": "/cool-clothing/static/js/main.bf0bd3b2.chunk.js"
+    "revision": "d8e198366780d3edfdc8",
+    "url": "/cool-clothing/static/js/main.e4913a7a.chunk.js"
   },
   {
     "revision": "5e2af9d2b4210fe2aa91",
