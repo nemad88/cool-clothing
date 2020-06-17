@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cool-clothing/static/css/main.fb5e79b7.chunk.css",
-    "main.js": "/cool-clothing/static/js/main.0472d79d.chunk.js",
-    "main.js.map": "/cool-clothing/static/js/main.0472d79d.chunk.js.map",
+    "main.js": "/cool-clothing/static/js/main.bf0bd3b2.chunk.js",
+    "main.js.map": "/cool-clothing/static/js/main.bf0bd3b2.chunk.js.map",
     "runtime-main.js": "/cool-clothing/static/js/runtime-main.cdd42ff3.js",
     "runtime-main.js.map": "/cool-clothing/static/js/runtime-main.cdd42ff3.js.map",
     "static/js/2.5b74c2d3.chunk.js": "/cool-clothing/static/js/2.5b74c2d3.chunk.js",
     "static/js/2.5b74c2d3.chunk.js.map": "/cool-clothing/static/js/2.5b74c2d3.chunk.js.map",
     "index.html": "/cool-clothing/index.html",
-    "precache-manifest.8cceebc2754855178ef1af4c397362fe.js": "/cool-clothing/precache-manifest.8cceebc2754855178ef1af4c397362fe.js",
+    "precache-manifest.56574d328ceaf91f26f8196effa065aa.js": "/cool-clothing/precache-manifest.56574d328ceaf91f26f8196effa065aa.js",
     "service-worker.js": "/cool-clothing/service-worker.js",
     "static/css/main.fb5e79b7.chunk.css.map": "/cool-clothing/static/css/main.fb5e79b7.chunk.css.map",
     "static/js/2.5b74c2d3.chunk.js.LICENSE.txt": "/cool-clothing/static/js/2.5b74c2d3.chunk.js.LICENSE.txt",
@@ -28,6 +28,6 @@
     "static/js/runtime-main.cdd42ff3.js",
     "static/js/2.5b74c2d3.chunk.js",
     "static/css/main.fb5e79b7.chunk.css",
-    "static/js/main.0472d79d.chunk.js"
+    "static/js/main.bf0bd3b2.chunk.js"
   ]
 }
