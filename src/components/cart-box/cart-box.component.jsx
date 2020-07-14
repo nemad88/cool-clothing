@@ -48,7 +48,7 @@ const CartBox = ({ history }) => {
           <S.CartTotal>Total: ${cartTotal}</S.CartTotal>
         </>
       ) : (
-        <YourCartIsEmpty/>
+        <YourCartIsEmpty />
       )}
     </S.CartBox>
   );

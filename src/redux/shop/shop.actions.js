@@ -33,5 +33,3 @@ export const fetchCategoriesStartAsync = () => {
       .catch((err) => dispatch(fetchCategoriesFailure(err.message)));
   };
 };
-
-

@@ -7,7 +7,7 @@ export const CustomButton = styled.div`
   border: black 1px solid;
   font-size: 1.6rem;
   padding: 1rem;
-  width: ${props => props.customWidth};
+  width: ${(props) => props.customWidth};
   font-weight: bold;
   text-align: center;
 

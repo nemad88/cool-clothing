@@ -16,7 +16,6 @@ const SubmitButton = styled.input`
   color: white;
   border: 1px solid black;
   margin-top: 1rem;
-  
 `;
 
 const Title = styled.h1`
