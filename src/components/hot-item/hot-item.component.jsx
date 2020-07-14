@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import CustomImage from "../custom-image/custom-image.component";
 import JumpButton from "../custom-image-button/custom-image-button.component";
@@ -7,14 +8,21 @@ import JumpButton from "../custom-image-button/custom-image-button.component";
 import { StyledComponents as S } from "./hot-item.styles";
 
 import { addItemToCart } from "../../redux/cart/cart.actions";
+import { showModal, hideModal } from "../../redux/modal/modal.actions";
 
 const HotItem = ({ item, addItem }) => {
   const { imageUrl, name, price } = item;
+  const dispatch = useDispatch();
 
   return (
     <S.HotItem
       onClick={() => {
         addItem(item);
+
+        dispatch(showModal(item.name + " added to the cart"));
+        setTimeout(() => {
+          dispatch(hideModal());
+        }, 1500);
       }}
     >
       <div>

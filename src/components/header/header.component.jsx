@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Logo from "../logo/logo.components";
 import HeaderTopNav from "../header-top-nav/header-top-nav.component";
 import HeaderCategoryNav from "../header-category-nav/header-category-nav.component";
-import BigButtons from "../header-big-buttons/header-big-buttons.components";
 import HeaderTop from "../header-top/header-top.component";
 
 import { StyledComponents as S } from "./header.styles";
@@ -27,7 +26,6 @@ const Header = () => {
         <HeaderTopNav />
       </HeaderTop>
       <HeaderCategoryNav />
-      <BigButtons />
     </S.Header>
   );
 };

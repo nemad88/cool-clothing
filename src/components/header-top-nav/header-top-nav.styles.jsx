@@ -1,25 +1,32 @@
 import styled, { css } from "styled-components";
 
-import { ReactComponent as FavoritesIconSVG } from "../../assets/img/favorites.svg";
 import { ReactComponent as PersonIconSVG } from "../../assets/img/person.svg";
 import { ReactComponent as CartIconSVG } from "../../assets/img/shopbag.svg";
+import { ReactComponent as LogoutSVG } from "../../assets/img/logout.svg";
 
 const iconStyle = css`
-  margin: 0 15px;
   width: 30px;
-  min-width: 30px;
   height: 30px;
+  min-width: 30px;
+
   cursor: pointer;
+  @media screen and (max-width: 800px) {
+    margin: 0 5px;
+  }
 `;
 
 export const HeaderTopNav = styled.div`
-  grid-area: nav;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: 20%;
+  width: 100%;
 
   @media screen and (max-width: 800px) {
+    order: 2;
+    flex-basis: 50%;
     justify-content: flex-end;
+    padding-right: 10px;
   }
 `;
 
@@ -31,13 +38,19 @@ export const PersonIcon = styled(PersonIconSVG)`
   ${iconStyle}
 `;
 
-export const FavoritesIcon = styled(FavoritesIconSVG)`
+export const Logout = styled(LogoutSVG)`
   ${iconStyle}
+
+  &:hover {
+    path {
+      fill: #b00000;
+    }
+  }
 `;
 
 export const StyledComponents = {
   HeaderTopNav,
   CartIcon,
   PersonIcon,
-  FavoritesIcon,
+  Logout,
 };

@@ -20,7 +20,7 @@ export const removeItemFromCart = (cartItems, cartItemToRemove) => {
   );
 
   if (existingCartItem.quantity === 1) {
-    return cartItems.filter((cartItem) => cartItem.id !== cartItemToRemove.id);
+    return removeAllFromAnItem(cartItems, cartItemToRemove);
   }
 
   return cartItems.map((cartItem) =>
@@ -31,4 +31,8 @@ export const removeItemFromCart = (cartItems, cartItemToRemove) => {
         }
       : cartItem
   );
+};
+
+export const removeAllFromAnItem = (cartItems, cartItemToRemove) => {
+  return cartItems.filter((cartItem) => cartItem.id !== cartItemToRemove.id);
 };

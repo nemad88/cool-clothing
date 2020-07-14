@@ -1,32 +1,51 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
+import { auth, createUserProfileDocuemnt } from "./firebase/firebase.utils";
 import { createStructuredSelector } from "reselect";
 
 import { GlobalStyle } from "./global.styles";
 
 import Header from "./components/header/header.component";
+import Footer from "./components/footer/footer.component";
 import HomePage from "./pages/homepage/homepage.component";
 import Category from "./pages/category/category.component";
 import Checkout from "./pages/checkout/checkout.component";
+import SignInSignUp from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 
 import { fetchCategoriesStartAsync } from "./redux/shop/shop.actions";
-
-// JUST FOR UPLOAD TODO: REMOVE
-// import { addCollectionAndDocuments } from "./firebase/firebase.utils";
-// import { selectDataForUpload } from "./redux/shop/shop.selector";
+import { setCurrentUser } from "./redux/user/user.actions";
+import { selectCurrentUser } from "./redux/user/user.selector";
 
 class App extends React.Component {
+  unsubscribeFromAuth = null;
+
   componentDidMount() {
-    const { fetchCategories } = this.props;
-    // JUST FOR UPLOAD TODO: REMOVE
-    //addCollectionAndDocuments("categories", collectionsArray);
+    const { fetchCategories, setCurrentUser } = this.props;
     fetchCategories();
+
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocuemnt(userAuth);
+        userRef.onSnapshot((snapshot) => {
+          setCurrentUser({
+            id: snapshot.id,
+            ...snapshot.data(),
+          });
+        });
+      } else {
+        setCurrentUser(userAuth);
+      }
+    });
   }
 
   componentDidUpdate() {
     const { fetchCategories } = this.props;
     fetchCategories();
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
   }
 
   render() {
@@ -38,7 +57,14 @@ class App extends React.Component {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/categories/:slug" component={Category} />
           <Route exact path="/checkout" component={Checkout} />
+          <Route
+            path="/signin"
+            render={() =>
+              this.props.user ? <Redirect to="/" /> : <SignInSignUp />
+            }
+          />
         </Switch>
+        <Footer />
       </>
     );
   }
@@ -46,11 +72,13 @@ class App extends React.Component {
 
 const mapDispatchToProps = (dispatch) => ({
   fetchCategories: () => dispatch(fetchCategoriesStartAsync()),
+  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 });
 
 const mapStateToProps = createStructuredSelector({
   // JUST FOR UPLOAD TODO: REMOVE
   // collectionsArray: selectDataForUpload,
+  user: selectCurrentUser,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

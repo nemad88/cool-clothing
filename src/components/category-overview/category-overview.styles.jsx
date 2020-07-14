@@ -5,6 +5,7 @@ export const CategoryOverview = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 5rem;
 `;
 
 export const CategoryItemsList = styled.div`
@@ -20,8 +21,9 @@ export const ProductItem = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
-  margin: 1rem;
+  margin: 2rem;
 
   img {
     transition: all 1s ease-out;
@@ -36,6 +38,8 @@ export const ProductItem = styled.div`
   }
 
   @media screen and (max-width: 800px) {
+    margin: 0.5rem;
+
     &:hover img {
       filter: blur(0px);
     }
@@ -43,8 +47,12 @@ export const ProductItem = styled.div`
 `;
 
 export const Title = styled.div`
+  color: black;
   font-size: 1.6rem;
+  text-align: center;
   font-weight: bold;
+  margin: 2rem 0 0.5rem 0;
+  color: black;
 `;
 
 export const Price = styled.div`

@@ -61,7 +61,8 @@ export const CartCheckoutBox = styled.div`
   height: 15vh;
   flex-direction: column;
   width: 100%;
-  background: #0fceac;
+  /* background: #0fceac; */
+  background: #fff;
   padding: 8rem 2rem 5rem 2rem;
   justify-content: center;
   align-items: center;

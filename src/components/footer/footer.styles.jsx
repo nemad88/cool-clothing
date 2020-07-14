@@ -34,7 +34,13 @@ export const InputStyled = styled.input`
   width: 300px;
   height: 40px;
   font-size: 2.4rem;
-  border: none;
+  border: ${(props) => (props.invalid ? "1px solid red" : "none")};
+  user-select: auto;
+
+  &:focus {
+    outline: ${(props) => (props.invalid ? "none" : "1px solid black;")};
+  }
+
   padding: 1rem;
   -webkit-appearance: none;
 `;

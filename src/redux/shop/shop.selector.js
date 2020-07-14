@@ -42,6 +42,13 @@ export const selectHotItems = createSelector(
   }
 );
 
+export const selectSummerItems = createSelector(
+  [selectAllItemsAsArray],
+  (items) => {
+    return items.filter((item) => item.summer);
+  }
+);
+
 export const selectCategory = (categoryName) => {
   return createSelector([selectCategoriesCollection], (category) => {
     return category ? category[categoryName] : null;

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 const commonSpanStyle = css`
-  padding: 0.2rem 2rem;
+  padding: 0.1rem 2rem;
   background: black;
   margin: 0.5rem 0;
   display: block;
@@ -12,17 +12,17 @@ export const BurgerIcon = styled.div`
   position: relative;
   display: none;
   cursor: pointer;
-  margin: 2rem;
+  margin: 0 1.5rem;
 
   @media screen and (max-width: 800px) {
     display: block;
-    z-index: 999;
+    z-index: 99;
   }
 `;
 
 export const BurgerIconSpan1 = styled.span`
   &.toggle {
-    transform: rotateZ(45deg) translateY(300%);
+    transform: rotateZ(45deg) translateY(1.05rem);
     background: black;
   }
   ${commonSpanStyle}
@@ -37,7 +37,7 @@ export const BurgerIconSpan2 = styled.span`
 
 export const BurgerIconSpan3 = styled.span`
   &.toggle {
-    transform: rotateZ(-45deg) translateY(-310%);
+    transform: rotateZ(-45deg) translateY(-1.05rem);
     background: black;
   }
   ${commonSpanStyle}

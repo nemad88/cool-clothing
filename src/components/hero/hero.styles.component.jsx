@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Hero = styled.div`
-  margin-top: 150px;
   min-height: 44rem;
   background: linear-gradient(70deg, #07a5888c, rgba(82, 82, 240, 0.144)),
     url("http://adamgerman.hu/works/images/coolclothing/hero.jpg") 50% 0;
@@ -11,11 +10,8 @@ export const Hero = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 150px);
-
-  @media screen and (max-width: 800px) {
-    margin-top: 120px;
-  }
+  height: calc(100vh - 120px);
+  padding: 1rem;
 `;
 
 export const HeroTitle = styled.h1`
@@ -24,6 +20,11 @@ export const HeroTitle = styled.h1`
   letter-spacing: -1px;
   text-align: center;
   color: white;
+  transition: all 1s ease-out;
+
+  &:hover {
+    letter-spacing: 2px;
+  }
 `;
 
 export const HeroSubtitle = styled.h2`
@@ -31,6 +32,11 @@ export const HeroSubtitle = styled.h2`
   color: black;
   letter-spacing: 6px;
   text-align: center;
+  transition: all 1s ease-out;
+
+  &:hover {
+    letter-spacing: 1px;
+  }
 `;
 
 export const HeroButton = styled(Link)`
@@ -41,12 +47,17 @@ export const HeroButton = styled(Link)`
   background-color: #ffa27a;
   color: white;
   text-decoration: none;
-  border-radius: 0.7rem;
+
   box-shadow: 7px 10px 23px 2px rgba(0, 0, 0, 0.4);
   transition: all 0.2s;
 
   &:hover {
     transform: translateY(-2px);
+    box-shadow: 7px 10px 16px 2px rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    transform: translateY(0);
     box-shadow: 7px 10px 16px 2px rgba(0, 0, 0, 0.2);
   }
 `;

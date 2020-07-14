@@ -1,12 +1,16 @@
 import React from "react";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 
 import { StyledComponents as S } from "./search-result-item.styles";
 import CustomImage from "../custom-image/custom-image.component";
+
 import { addItemToCart } from "../../redux/cart/cart.actions";
+import { showModal, hideModal } from "../../redux/modal/modal.actions";
 
 const SearchResultItem = ({ item, addItem }) => {
   const { imageUrl, name, price } = item;
+  const dispatch = useDispatch();
+
   return (
     <S.SearchResultItem>
       <div style={{ flex: "1 1 5rem" }}>
@@ -18,6 +22,11 @@ const SearchResultItem = ({ item, addItem }) => {
         <S.SearchResultItemButton
           onClick={() => {
             addItem(item);
+
+            dispatch(showModal(item.name + " added to the cart"));
+            setTimeout(() => {
+              dispatch(hideModal());
+            }, 1500);
           }}
         >
           ADD TO CART

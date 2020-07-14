@@ -1,0 +1,4 @@
+export const ModalActionTypes = {
+  SHOW_MODAL_MESSAGE: "SHOW_MODAL_MESSAGE",
+  HIDE_MODAL_MESSAGE: "HIDE_MODAL_MESSAGE",
+};

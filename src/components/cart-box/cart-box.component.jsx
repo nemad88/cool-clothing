@@ -13,6 +13,8 @@ import { StyledComponents as S } from "./cart-box.styles";
 import { toggleCart } from "../../redux/cart/cart.actions";
 
 import CartBoxItem from "../cart-box-item/cart-box-item.component";
+import CustomButton from "../custom-button/custom-button.component";
+import YourCartIsEmpty from "../your-cart-is-empty/your-cart-is-empty.component";
 
 const CartBox = ({ history }) => {
   const cartItems = useSelector(selectCartItems);
@@ -31,38 +33,25 @@ const CartBox = ({ history }) => {
       {cartItems.length > 0 ? (
         <>
           <S.CartCheckoutBox>
-            <S.GoToCheckoutButton
-              onClick={() => {
+            <CustomButton
+              customWidth="100%"
+              handleClick={() => {
                 history.push("/checkout");
                 dispatch(toggleCart());
               }}
             >
               GO TO CHECKOUT
-            </S.GoToCheckoutButton>
+            </CustomButton>
           </S.CartCheckoutBox>
 
           <S.ItemList>{selectedItem}</S.ItemList>
           <S.CartTotal>Total: ${cartTotal}</S.CartTotal>
         </>
       ) : (
-        <S.YourCartIsEmpty>Your cart is empty </S.YourCartIsEmpty>
+        <YourCartIsEmpty/>
       )}
     </S.CartBox>
   );
 };
 
 export default withRouter(CartBox);
-
-// {cartItems.length > 0 ? (
-//   <S.GoToCheckoutButton
-//     onClick={() => {
-//       history.push("/checkout");
-//       dispatch(toggleCart());
-//     }}
-//   >
-//     GO TO CHECKOUT
-//   </S.GoToCheckoutButton>
-// ) : (
-//   <S.YourCartIsEmpty>Your cart is empty :(</S.YourCartIsEmpty>
-// )}
-// <S.CartTotal>Total: ${cartTotal}</S.CartTotal>

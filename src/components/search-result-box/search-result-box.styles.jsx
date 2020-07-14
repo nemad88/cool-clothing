@@ -13,7 +13,6 @@ export const SearchResultBox = styled.div`
 `;
 
 export const SearchResultBoxTitle = styled.h3`
-  color: green;
   font-size: 2.4rem;
   margin-bottom: 0.75rem;
 `;

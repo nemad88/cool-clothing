@@ -10,6 +10,7 @@ export const NavList = styled.ul`
   justify-content: center;
   align-items: center;
   transition: transform 1s ease;
+  margin-top: 1rem;
 
   @media screen and (max-width: 800px) {
     display: none;

@@ -1,16 +1,12 @@
 import styled from "styled-components";
 
 export const HeaderTop = styled.div`
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-areas: "logo search search search nav";
 
   @media screen and (max-width: 800px) {
-    grid-template-areas:
-      "logo logo nav nav nav"
-      "search search search search search";
-    margin-bottom: 1rem;
+    flex-wrap: wrap;
   }
 `;
 

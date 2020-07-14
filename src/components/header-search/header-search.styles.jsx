@@ -7,7 +7,8 @@ export const HeaderSearch = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  grid-area: search;
+  width: 100%;
+  margin: 0 1rem;
 
   input[type="search"]::-webkit-search-decoration,
   input[type="search"]::-webkit-search-cancel-button,
@@ -17,7 +18,8 @@ export const HeaderSearch = styled.div`
   }
 
   @media screen and (max-width: 800px) {
-    margin: 0 1rem;
+    margin: 1rem 1rem 0 1rem;
+    order: 3;
   }
 `;
 
@@ -28,10 +30,7 @@ export const SearchField = styled.input`
   border: none;
   font-size: 1.6rem;
   -webkit-appearance: none;
-
-  &:focus {
-    outline: none;
-  }
+  user-select: auto;
 `;
 
 export const MagnifyIcon = styled(MagnifyIconSVG)`

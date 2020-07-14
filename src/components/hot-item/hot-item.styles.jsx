@@ -36,7 +36,10 @@ export const HotItem = styled.div`
 export const HotItemTitle = styled.h2`
   color: black;
   font-size: 1.6rem;
-  margin: 2rem 0 0.4rem 0;
+  text-align: center;
+  font-weight: bold;
+  margin: 2rem 0 0.5rem 0;
+  color: black;
 `;
 
 export const HotItemPrice = styled.div`

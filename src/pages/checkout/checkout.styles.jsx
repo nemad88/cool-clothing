@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 export const CheckoutPage = styled.div`
-  margin-top: 18rem;
+  padding-top: 5rem;
+`;
 
-  @media screen and (max-width: 800px) {
-    margin-top: 12rem;
-  }
+export const ButtonBox = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12rem;
 `;
 
 export const StyledComponents = {
   CheckoutPage,
+  ButtonBox,
 };

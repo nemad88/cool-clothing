@@ -13,3 +13,8 @@ export const removeItemFromCart = (item) => ({
 export const toggleCart = () => ({
   type: CartActionTypes.TOGGLE_CART,
 });
+
+export const removeAllFromAnItem = (item) => ({
+  type: CartActionTypes.REMOVE_ALL_FROM_AN_ITEM,
+  payload: item,
+});

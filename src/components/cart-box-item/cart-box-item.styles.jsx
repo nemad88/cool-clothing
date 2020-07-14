@@ -1,11 +1,4 @@
-import styled, { css } from "styled-components";
-import { ReactComponent as Minus } from "../../assets/img/minus-filled.svg";
-import { ReactComponent as Plus } from "../../assets/img/plus-filled.svg";
-
-const iconMixin = css`
-  width: 30px;
-  margin: 1rem;
-`;
+import styled from "styled-components";
 
 export const CartBoxItem = styled.div`
   display: grid;
@@ -26,23 +19,11 @@ const CartBoxItemTitle = styled.h3`
 `;
 
 const CartBoxItemLine = styled.h4`
-  text-align: center;
-  font-size: 1.2rem;
-`;
-
-const QuantityBox = styled.div`
   display: flex;
-  font-size: 1.4rem;
   justify-content: center;
   align-items: center;
-`;
-
-export const MinusIcon = styled(Minus)`
-  ${iconMixin}
-`;
-
-export const PlusIcon = styled(Plus)`
-  ${iconMixin}
+  text-align: center;
+  font-size: 1.2rem;
 `;
 
 export const StyledComponents = {
@@ -50,7 +31,4 @@ export const StyledComponents = {
   CartBoxItemDetails,
   CartBoxItemTitle,
   CartBoxItemLine,
-  MinusIcon,
-  PlusIcon,
-  QuantityBox,
 };

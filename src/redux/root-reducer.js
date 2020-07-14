@@ -6,6 +6,8 @@ import shopReducer from "./shop/shop.reducer";
 import searchReducer from "./search/search.reducer";
 import cartReducer from "./cart/cart.reducer";
 import burgerReducer from "./burger/burger.reducer";
+import modalReducer from "./modal/modal.reducer";
+import userReducer from "./user/user.reducer";
 
 const persistConfig = {
   key: "root",
@@ -18,6 +20,8 @@ const rootReducer = combineReducers({
   search: searchReducer,
   cart: cartReducer,
   burger: burgerReducer,
+  modal: modalReducer,
+  user: userReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);

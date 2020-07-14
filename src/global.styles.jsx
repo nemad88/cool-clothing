@@ -17,6 +17,15 @@ html {
   position: relative;
 }
 
+body {
+  padding-top: 12rem;
+  
+}
+
+button {
+  outline: none;
+}
+
 .section-title {
   font-size: 3.6rem;
   text-align: center;
@@ -32,6 +41,10 @@ a {
 input {
     border-radius: 0;
     -webkit-appearance: none;
+
+    &:focus {
+    outline: 1px solid black;
+  }
 }
 
 `;

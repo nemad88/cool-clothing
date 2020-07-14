@@ -16,6 +16,27 @@ firebase.initializeApp(firebaseConfig);
 
 export const firestore = firebase.firestore();
 
+export const createUserProfileDocuemnt = async (userAuth, additionalData) => {
+  if (!userAuth) return;
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  const snapShot = await userRef.get();
+
+  if (!snapShot.exists) {
+    const registeredAt = new Date();
+    const { email } = userAuth;
+
+    try {
+      await userRef.set({
+        email,
+        registeredAt,
+        ...additionalData,
+      });
+    } catch (error) {}
+  }
+  return userRef;
+};
+
 export const convertCategoriesSnapshotToMap = (categoriesSnapshot) => {
   const transformedCategories = categoriesSnapshot.docs.map((docSnapshot) => {
     const { title, items } = docSnapshot.data();
@@ -47,5 +68,7 @@ export const addCollectionAndDocuments = async (
 
   return await batch.commit();
 };
+
+export const auth = firebase.auth();
 
 export default firebase;

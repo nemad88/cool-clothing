@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Header = styled.div`
   position: fixed;
   top: 0;
-  height: 150px;
+  height: 120px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,11 +14,10 @@ export const Header = styled.div`
   transition: all 0.3s ease-in-out;
 
   @media screen and (max-width: 800px) {
-    height: 120px;
   }
 
   &.closed {
-    transform: translateY(-50%);
+    transform: translateY(-55%);
 
     @media screen and (max-width: 800px) {
       transform: translateY(0%);

@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 
-import Hero from "../../components/hero/hero.component";
+import HeroSection from "../../components/hero/hero.component";
 import CategoriesSectionContainer from "../../components/categories-section/categories-section.container";
-import Hot from "../../components/hot-section/hot-section.component";
-import Footer from "../../components/footer/footer.component";
-
+import HotSection from "../../components/hot-section/hot-section.component";
 import CartBox from "../../components/cart-box/cart-box.component";
+import Modal from "../../components/modal/modal.component";
 
 const Homepage = () => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div>
-      <CartBox />      
-      <Hero />
+      <Modal />
+      <CartBox />
+      <HeroSection />
       <CategoriesSectionContainer />
-      <Hot />
-      <Footer />
+      <HotSection />
     </div>
   );
 };
