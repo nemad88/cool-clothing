@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "33f78f72ad007dc6b2d6d6d6b5d91db9",
+    "revision": "775bcfe4d64584827c0e75881c29c08c",
     "url": "/cool-clothing/index.html"
   },
   {
-    "revision": "0bf563f320a44b853c9c",
+    "revision": "a580e09d56f0034b218c",
     "url": "/cool-clothing/static/css/main.fb5e79b7.chunk.css"
   },
   {
-    "revision": "1d9d6768b07cf44e345d",
-    "url": "/cool-clothing/static/js/2.7289c15c.chunk.js"
+    "revision": "1e9e79ce3d2f669ac216",
+    "url": "/cool-clothing/static/js/2.dd39bf23.chunk.js"
   },
   {
-    "revision": "6331f70a3ea8aafd2e3fca1343e5ed47",
-    "url": "/cool-clothing/static/js/2.7289c15c.chunk.js.LICENSE.txt"
+    "revision": "d0b13a04dd0dc4c851ad16fad1cc6f51",
+    "url": "/cool-clothing/static/js/2.dd39bf23.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0bf563f320a44b853c9c",
-    "url": "/cool-clothing/static/js/main.26d1ef44.chunk.js"
+    "revision": "a580e09d56f0034b218c",
+    "url": "/cool-clothing/static/js/main.43e5e7ce.chunk.js"
   },
   {
-    "revision": "5e2af9d2b4210fe2aa91",
-    "url": "/cool-clothing/static/js/runtime-main.cdd42ff3.js"
+    "revision": "2664769cf54e60e57c26",
+    "url": "/cool-clothing/static/js/runtime-main.4cd09e86.js"
   },
   {
     "revision": "619de632173123e8b6191ab46090f2ac",
