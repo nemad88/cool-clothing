@@ -12,9 +12,7 @@ ReactDOM.render(
   <Provider store={store}>
     <HashRouter basename="/cool-clothing">
       <PersistGate persistor={persistor}>
-        <React.StrictMode>
           <App />
-        </React.StrictMode>
       </PersistGate>
     </HashRouter>
   </Provider>,

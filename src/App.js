@@ -1,10 +1,9 @@
-import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import { connect } from "react-redux";
-import { auth, createUserProfileDocuemnt } from "./firebase/firebase.utils";
-import { createStructuredSelector } from "reselect";
+import React, {useEffect} from "react";
+import {Switch, Route, Redirect} from "react-router-dom";
+import {useSelector, useDispatch} from "react-redux";
 
-import { GlobalStyle } from "./global.styles";
+import {auth, createUserProfileDocuemnt} from "./firebase/firebase.utils";
+import {GlobalStyle} from "./global.styles";
 
 import Header from "./components/header/header.component";
 import Footer from "./components/footer/footer.component";
@@ -13,72 +12,62 @@ import Category from "./pages/category/category.component";
 import Checkout from "./pages/checkout/checkout.component";
 import SignInSignUp from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 
-import { fetchCategoriesStartAsync } from "./redux/shop/shop.actions";
-import { setCurrentUser } from "./redux/user/user.actions";
-import { selectCurrentUser } from "./redux/user/user.selector";
+import {fetchCategoriesStartAsync} from "./redux/shop/shop.actions";
+import {setCurrentUser} from "./redux/user/user.actions";
+import {selectCurrentUser} from "./redux/user/user.selector";
 
-class App extends React.Component {
-  unsubscribeFromAuth = null;
+const App = () => {
 
-  componentDidMount() {
-    const { fetchCategories, setCurrentUser } = this.props;
-    fetchCategories();
+    const dispatch = useDispatch();
+    const currentUser = useSelector(selectCurrentUser);
 
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
-      if (userAuth) {
-        const userRef = await createUserProfileDocuemnt(userAuth);
-        userRef.onSnapshot((snapshot) => {
-          setCurrentUser({
-            id: snapshot.id,
-            ...snapshot.data(),
-          });
-        });
-      } else {
-        setCurrentUser(userAuth);
-      }
-    });
-  }
+    useEffect(() => {
+        const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+            if (userAuth) {
+                const userRef = await createUserProfileDocuemnt(userAuth);
+                userRef.onSnapshot((snapshot) => {
 
-  componentDidUpdate() {
-    const { fetchCategories } = this.props;
-    fetchCategories();
-  }
-
-  componentWillUnmount() {
-    this.unsubscribeFromAuth();
-  }
-
-  render() {
-    return (
-      <>
-        <GlobalStyle />
-        <Header />
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/categories/:slug" component={Category} />
-          <Route exact path="/checkout" component={Checkout} />
-          <Route
-            path="/signin"
-            render={() =>
-              this.props.user ? <Redirect to="/" /> : <SignInSignUp />
+                    dispatch(
+                        setCurrentUser({
+                            id: snapshot.id,
+                            ...snapshot.data(),
+                        }))
+                });
+            } else {
+                dispatch(setCurrentUser(userAuth));
             }
-          />
-        </Switch>
-        <Footer />
-      </>
+        });
+        return () => {
+            unsubscribeFromAuth();
+        }
+    }, [dispatch])
+
+
+    useEffect(() => {
+        dispatch(fetchCategoriesStartAsync());
+    }, [dispatch])
+
+
+    return (
+        <>
+            <GlobalStyle/>
+            <Header/>
+            <Switch>
+                <Route exact path="/" component={HomePage}/>
+                <Route exact path="/categories/:slug" component={Category}/>
+                <Route exact path="/checkout" component={Checkout}/>
+                <Route
+                    path="/signin"
+                    render={() =>
+                        currentUser ? <Redirect to="/"/> : <SignInSignUp/>
+                    }
+                />
+            </Switch>
+            <Footer/>
+        </>
     );
-  }
+
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  fetchCategories: () => dispatch(fetchCategoriesStartAsync()),
-  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
-});
 
-const mapStateToProps = createStructuredSelector({
-  // JUST FOR UPLOAD TODO: REMOVE
-  // collectionsArray: selectDataForUpload,
-  user: selectCurrentUser,
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
