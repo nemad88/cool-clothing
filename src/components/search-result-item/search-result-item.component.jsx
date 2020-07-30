@@ -1,11 +1,11 @@
-import React from "react";
-import { connect, useDispatch } from "react-redux";
+import React from 'react';
+import { connect, useDispatch } from 'react-redux';
 
-import { StyledComponents as S } from "./search-result-item.styles";
-import CustomImage from "../custom-image/custom-image.component";
+import { StyledComponents as S } from './search-result-item.styles';
+import CustomImage from '../custom-image/custom-image.component';
 
-import { addItemToCart } from "../../redux/cart/cart.actions";
-import { showModal, hideModal } from "../../redux/modal/modal.actions";
+import { addItemToCart } from '../../redux/cart/cart.actions';
+import { showModal, hideModal } from '../../redux/modal/modal.actions';
 
 const SearchResultItem = ({ item, addItem }) => {
   const { imageUrl, name, price } = item;
@@ -13,8 +13,8 @@ const SearchResultItem = ({ item, addItem }) => {
 
   return (
     <S.SearchResultItem>
-      <div style={{ flex: "1 1 5rem" }}>
-        <CustomImage customWidth={"100%"} imageUrl={imageUrl} />
+      <div style={{ flex: '1 1 5rem' }}>
+        <CustomImage customWidth={'100%'} imageUrl={imageUrl} />
       </div>
       <S.SearchResultItemDetails>
         <S.SearchResultItemTitle>{name}</S.SearchResultItemTitle>
@@ -23,7 +23,7 @@ const SearchResultItem = ({ item, addItem }) => {
           onClick={() => {
             addItem(item);
 
-            dispatch(showModal(item.name + " added to the cart"));
+            dispatch(showModal(item.name + ' added to the cart'));
             setTimeout(() => {
               dispatch(hideModal());
             }, 1500);

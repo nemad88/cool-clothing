@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { ReactComponent as CartIconSVG } from "../../assets/img/shopbag.svg";
+import { ReactComponent as CartIconSVG } from '../../assets/img/shopbag.svg';
 
 export const CartIconContainer = styled.div`
   position: relative;

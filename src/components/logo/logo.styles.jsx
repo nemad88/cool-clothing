@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { ReactComponent as LogoSVG } from "../../assets/img/LogoNew.svg";
+import styled from 'styled-components';
+import { ReactComponent as LogoSVG } from '../../assets/img/LogoNew.svg';
 
 export const LogoContainer = styled.div`
   display: flex;

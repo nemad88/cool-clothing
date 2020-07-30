@@ -1,5 +1,5 @@
-import { createSelector } from "reselect";
-import { selectAllItemsAsArray } from "../shop/shop.selector";
+import { createSelector } from 'reselect';
+import { selectAllItemsAsArray } from '../shop/shop.selector';
 
 export const selectSearch = (state) => state.search;
 

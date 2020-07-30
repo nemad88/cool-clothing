@@ -1,20 +1,20 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import {
   selectCartItems,
   selectCartIsOpened,
   selectCartTotal,
-} from "../../redux/cart/cart.selector";
+} from '../../redux/cart/cart.selector';
 
-import { StyledComponents as S } from "./cart-box.styles";
+import { StyledComponents as S } from './cart-box.styles';
 
-import { toggleCart } from "../../redux/cart/cart.actions";
+import { toggleCart } from '../../redux/cart/cart.actions';
 
-import CartBoxItem from "../cart-box-item/cart-box-item.component";
-import CustomButton from "../custom-button/custom-button.component";
-import YourCartIsEmpty from "../your-cart-is-empty/your-cart-is-empty.component";
+import CartBoxItem from '../cart-box-item/cart-box-item.component';
+import CustomButton from '../custom-button/custom-button.component';
+import YourCartIsEmpty from '../your-cart-is-empty/your-cart-is-empty.component';
 
 const CartBox = ({ history }) => {
   const cartItems = useSelector(selectCartItems);
@@ -28,7 +28,7 @@ const CartBox = ({ history }) => {
   ));
 
   return (
-    <S.CartBox className={cartIsOpened ? "opened" : null}>
+    <S.CartBox className={cartIsOpened ? 'opened' : null}>
       <S.CloseIcon onClick={() => dispatch(toggleCart())}></S.CloseIcon>
       {cartItems.length > 0 ? (
         <>
@@ -36,7 +36,7 @@ const CartBox = ({ history }) => {
             <CustomButton
               customWidth="100%"
               handleClick={() => {
-                history.push("/checkout");
+                history.push('/checkout');
                 dispatch(toggleCart());
               }}
             >

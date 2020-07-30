@@ -1,7 +1,7 @@
-import { ModalActionTypes } from "./modal.types";
+import { ModalActionTypes } from './modal.types';
 
 const INITIAL_STATE = {
-  modalMessage: "",
+  modalMessage: '',
   show: false,
 };
 

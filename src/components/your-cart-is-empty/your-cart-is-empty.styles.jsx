@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { ReactComponent as SadSVG } from "../../assets/img/sad.svg";
+import styled from 'styled-components';
+import { ReactComponent as SadSVG } from '../../assets/img/sad.svg';
 
 const YourCartIsEmptyContianer = styled.div`
   width: 100%;

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { ReactComponent as RightIcon } from "../../assets/img/icon-right.svg";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ReactComponent as RightIcon } from '../../assets/img/icon-right.svg';
 
 import {
   FooterWrapper,
@@ -11,10 +11,10 @@ import {
   SubscribeButton,
   FooterLinks,
   FooterColumn,
-} from "./footer.styles";
+} from './footer.styles';
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   const [invalidEmail, setInvalidEmail] = useState(false);
 
   const handleEmailChange = (e) => {
@@ -24,7 +24,7 @@ const Footer = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!email.includes("@") || !email.includes(".")) {
+    if (!email.includes('@') || !email.includes('.')) {
       setInvalidEmail(true);
     }
   };

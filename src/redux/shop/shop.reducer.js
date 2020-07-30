@@ -1,4 +1,4 @@
-import ShopActionTypes from "./shop.types";
+import ShopActionTypes from './shop.types';
 
 // JUST FOR UPLOAD TODO: REMOVE
 //import { SHOP_DATA } from "../shop-data";

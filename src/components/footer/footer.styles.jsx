@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FooterWrapper = styled.div`
   min-height: 50rem;
@@ -34,11 +34,11 @@ export const InputStyled = styled.input`
   width: 300px;
   height: 40px;
   font-size: 2.4rem;
-  border: ${(props) => (props.invalid ? "1px solid red" : "none")};
+  border: ${(props) => (props.invalid ? '1px solid red' : 'none')};
   user-select: auto;
 
   &:focus {
-    outline: ${(props) => (props.invalid ? "none" : "1px solid black;")};
+    outline: ${(props) => (props.invalid ? 'none' : '1px solid black;')};
   }
 
   padding: 1rem;

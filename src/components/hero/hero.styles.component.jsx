@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Hero = styled.div`
   min-height: 44rem;
   background: linear-gradient(70deg, #07a5888c, rgba(82, 82, 240, 0.144)),
-    url("http://adamgerman.hu/works/images/coolclothing/hero.jpg") 50% 0;
+    url('http://adamgerman.hu/works/images/coolclothing/hero.jpg') 50% 0;
   background-size: cover;
   display: flex;
   flex-direction: column;

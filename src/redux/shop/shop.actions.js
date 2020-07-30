@@ -1,9 +1,9 @@
-import ShopActionTypes from "./shop.types";
+import ShopActionTypes from './shop.types';
 
 import {
   firestore,
   convertCategoriesSnapshotToMap,
-} from "../../firebase/firebase.utils";
+} from '../../firebase/firebase.utils';
 
 export const fetchCategoriesStart = () => ({
   type: ShopActionTypes.FETCH_CATEGORIES_START,
@@ -22,7 +22,7 @@ export const fetchCategoriesFailure = (errorMessage) => ({
 export const fetchCategoriesStartAsync = () => {
   return (dispatch) => {
     dispatch(fetchCategoriesStart());
-    const collectionRef = firestore.collection("categories").orderBy("title");
+    const collectionRef = firestore.collection('categories').orderBy('title');
 
     collectionRef
       .get()

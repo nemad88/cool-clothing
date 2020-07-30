@@ -1,11 +1,11 @@
-import { connect } from "react-redux";
-import { compose } from "redux";
+import { connect } from 'react-redux';
+import { compose } from 'redux';
 
-import { createStructuredSelector } from "reselect";
-import { selectIsCategoriesFetching } from "../../redux/shop/shop.selector";
+import { createStructuredSelector } from 'reselect';
+import { selectIsCategoriesFetching } from '../../redux/shop/shop.selector';
 
-import CategoriesSection from "./categories-section.component";
-import WithSpinner from "../with-spinner/with-spinner.component";
+import CategoriesSection from './categories-section.component';
+import WithSpinner from '../with-spinner/with-spinner.component';
 
 const mapStateToProps = createStructuredSelector({
   isLoading: selectIsCategoriesFetching,

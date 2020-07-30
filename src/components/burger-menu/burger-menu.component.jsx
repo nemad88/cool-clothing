@@ -1,14 +1,14 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { StyledComponents as S } from "./burger-menu.styles";
+import { StyledComponents as S } from './burger-menu.styles';
 
-import { selectCategoriesAsArray } from "../../redux/shop/shop.selector";
-import { selectBurgerMenuIsOpen } from "../../redux/burger/burger.selector";
+import { selectCategoriesAsArray } from '../../redux/shop/shop.selector';
+import { selectBurgerMenuIsOpen } from '../../redux/burger/burger.selector';
 
-import { toggleBurger } from "../../redux/burger/burger.actions";
+import { toggleBurger } from '../../redux/burger/burger.actions';
 
-import {} from "../../redux/burger/burger.actions";
+import {} from '../../redux/burger/burger.actions';
 
 const BurgerMenu = () => {
   const categories = useSelector(selectCategoriesAsArray);
@@ -19,7 +19,7 @@ const BurgerMenu = () => {
   const burgerMenuLinks = categories.map(({ routeName, title }) => (
     <S.MenuItem
       key={routeName}
-      to={"/categories/" + routeName}
+      to={'/categories/' + routeName}
       onClick={() => dispatch(toggleBurger())}
     >
       {title}
@@ -27,7 +27,7 @@ const BurgerMenu = () => {
   ));
 
   return (
-    <S.BurgerMenu className={burgerMenuIsOpen ? "open" : null}>
+    <S.BurgerMenu className={burgerMenuIsOpen ? 'open' : null}>
       {burgerMenuLinks}
     </S.BurgerMenu>
   );

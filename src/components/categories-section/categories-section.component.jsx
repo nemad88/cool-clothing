@@ -1,13 +1,13 @@
-import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
-import { selectCategoriesAsArray } from "../../redux/shop/shop.selector";
+import { selectCategoriesAsArray } from '../../redux/shop/shop.selector';
 
-import { StyledComponents as S } from "./categories-section.styles";
+import { StyledComponents as S } from './categories-section.styles';
 
-import CategoryItem from "../category-item/category-item.component";
-import SectionTitle from "../section-title/section-title.components";
+import CategoryItem from '../category-item/category-item.component';
+import SectionTitle from '../section-title/section-title.components';
 
 const CategoriesSection = ({ categories }) => {
   const categoryItems = categories.map((category) => {

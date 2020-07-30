@@ -1,13 +1,13 @@
-import React from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import React from 'react';
+import { connect, useDispatch, useSelector } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
-import { StyledComponents as S } from "./header-category-nav.styles";
+import { StyledComponents as S } from './header-category-nav.styles';
 
-import { selectCategoriesAsArray } from "../../redux/shop/shop.selector";
-import { selectCartIsOpened } from "../../redux/cart/cart.selector";
+import { selectCategoriesAsArray } from '../../redux/shop/shop.selector';
+import { selectCartIsOpened } from '../../redux/cart/cart.selector';
 
-import { toggleCart } from "../../redux/cart/cart.actions";
+import { toggleCart } from '../../redux/cart/cart.actions';
 
 const HeaderCategoryNav = ({ categories }) => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const HeaderCategoryNav = ({ categories }) => {
         <li key={routeName}>
           <S.NavListLink
             onClick={handleChangeCategory}
-            to={"/categories/" + routeName}
+            to={'/categories/' + routeName}
           >
             {title}
           </S.NavListLink>

@@ -1,14 +1,14 @@
-import React from "react";
-import { connect } from "react-redux";
-import { useDispatch } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-import CustomImage from "../custom-image/custom-image.component";
-import JumpButton from "../custom-image-button/custom-image-button.component";
+import CustomImage from '../custom-image/custom-image.component';
+import JumpButton from '../custom-image-button/custom-image-button.component';
 
-import { StyledComponents as S } from "./hot-item.styles";
+import { StyledComponents as S } from './hot-item.styles';
 
-import { addItemToCart } from "../../redux/cart/cart.actions";
-import { showModal, hideModal } from "../../redux/modal/modal.actions";
+import { addItemToCart } from '../../redux/cart/cart.actions';
+import { showModal, hideModal } from '../../redux/modal/modal.actions';
 
 const HotItem = ({ item, addItem }) => {
   const { imageUrl, name, price } = item;
@@ -19,7 +19,7 @@ const HotItem = ({ item, addItem }) => {
       onClick={() => {
         addItem(item);
 
-        dispatch(showModal(item.name + " added to the cart"));
+        dispatch(showModal(item.name + ' added to the cart'));
         setTimeout(() => {
           dispatch(hideModal());
         }, 1500);

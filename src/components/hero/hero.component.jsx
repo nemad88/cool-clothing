@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { StyledComponents as S } from "./hero.styles.component";
+import { StyledComponents as S } from './hero.styles.component';
 
 const Hero = () => (
   <S.Hero>

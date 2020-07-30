@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { StyledComponents as S } from "./your-cart-is-empty.styles";
+import { StyledComponents as S } from './your-cart-is-empty.styles';
 
 const YourCartIsEmpty = () => {
   return (

@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import SignIn from "../../components/sign-in/sign-in.component";
-import SignUp from "../../components/sign-up/sign-up.component";
+import SignIn from '../../components/sign-in/sign-in.component';
+import SignUp from '../../components/sign-up/sign-up.component';
 
-import { StyledComponents as S } from "./sign-in-sign-up.styles";
+import { StyledComponents as S } from './sign-in-sign-up.styles';
 
 const SignInSignUp = () => {
   return (

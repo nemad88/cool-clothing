@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { ReactComponent as CloseSVG } from "../../assets/img/close.svg";
+import { ReactComponent as CloseSVG } from '../../assets/img/close.svg';
 
 // CART BOX STYLE
 

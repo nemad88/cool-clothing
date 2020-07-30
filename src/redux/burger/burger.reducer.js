@@ -1,4 +1,4 @@
-import BurgerActionTypes from "./burger.types";
+import BurgerActionTypes from './burger.types';
 
 const INITIAL_STATE = {
   burgerMenuIsOpen: false,

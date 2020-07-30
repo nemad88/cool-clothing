@@ -1,8 +1,8 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-import { ReactComponent as PersonIconSVG } from "../../assets/img/person.svg";
-import { ReactComponent as CartIconSVG } from "../../assets/img/shopbag.svg";
-import { ReactComponent as LogoutSVG } from "../../assets/img/logout.svg";
+import { ReactComponent as PersonIconSVG } from '../../assets/img/person.svg';
+import { ReactComponent as CartIconSVG } from '../../assets/img/shopbag.svg';
+import { ReactComponent as LogoutSVG } from '../../assets/img/logout.svg';
 
 const iconStyle = css`
   width: 30px;

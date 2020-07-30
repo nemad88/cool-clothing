@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { StyledComponents as S } from "./header-search.styles";
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { StyledComponents as S } from './header-search.styles';
 
-import { searchItems, clearSearch } from "../../redux/search/search.actions";
+import { searchItems, clearSearch } from '../../redux/search/search.actions';
 
-import { selectSearchedItems } from "../../redux/search/search.selector";
+import { selectSearchedItems } from '../../redux/search/search.selector';
 
-import SearchResultBox from "../search-result-box/search-result-box.component";
+import SearchResultBox from '../search-result-box/search-result-box.component';
 
 const HeaderSearch = () => {
-  const [searchFor, setSearchFor] = useState("");
+  const [searchFor, setSearchFor] = useState('');
   const [searchBoxVisible, setSearchBoxVisible] = useState(false);
   const [isClearIconVisible, setIsClearIconVisible] = useState(false);
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const HeaderSearch = () => {
   };
 
   const handleClearSearch = () => {
-    setSearchFor("");
+    setSearchFor('');
     dispatch(clearSearch);
   };
 
@@ -51,7 +51,7 @@ const HeaderSearch = () => {
       {searchBoxVisible ? <SearchResultBox /> : null}
       <S.MagnifyIcon />
       <S.CloseIcon
-        className={isClearIconVisible ? "active" : null}
+        className={isClearIconVisible ? 'active' : null}
         onClick={handleClearSearch}
       />
     </S.HeaderSearch>

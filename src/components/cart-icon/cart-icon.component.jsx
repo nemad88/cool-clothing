@@ -1,11 +1,11 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { selectCartItemsCount } from "../../redux/cart/cart.selector";
+import { selectCartItemsCount } from '../../redux/cart/cart.selector';
 
-import { StyledComponents as S } from "./cart-icon.styles";
+import { StyledComponents as S } from './cart-icon.styles';
 
-import { toggleCart } from "../../redux/cart/cart.actions";
+import { toggleCart } from '../../redux/cart/cart.actions';
 
 const CartIcon = () => {
   const cartItemsQuantity = useSelector(selectCartItemsCount);

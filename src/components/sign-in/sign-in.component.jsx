@@ -1,25 +1,25 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { StyledComponents as S } from "./sign-in.styles";
+import { StyledComponents as S } from './sign-in.styles';
 
-import FormInput from "../form-input/form-input.component";
+import FormInput from '../form-input/form-input.component';
 
-import { auth } from "../../firebase/firebase.utils";
+import { auth } from '../../firebase/firebase.utils';
 
 const SignIn = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       await auth.signInWithEmailAndPassword(email, password);
-      setEmail("");
-      setPassword("");
-      setErrorMessage("");
+      setEmail('');
+      setPassword('');
+      setErrorMessage('');
     } catch (e) {
-      setErrorMessage("Wrong password or username");
+      setErrorMessage('Wrong password or username');
       console.error(e);
     }
   };

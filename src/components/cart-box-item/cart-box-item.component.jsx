@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import { StyledComponents as S } from "./cart-box-item.styles";
+import { StyledComponents as S } from './cart-box-item.styles';
 
-import CustomImage from "../custom-image/custom-image.component";
-import QuantityButton from "../quantity-button/quantity-button.component";
+import CustomImage from '../custom-image/custom-image.component';
+import QuantityButton from '../quantity-button/quantity-button.component';
 
 const CartBoxItem = ({ item }) => {
   return (
@@ -12,9 +12,9 @@ const CartBoxItem = ({ item }) => {
       <S.CartBoxItemDetails>
         <S.CartBoxItemTitle>{item.name}</S.CartBoxItemTitle>
         <S.CartBoxItemLine>
-          <QuantityButton item={item} change={"minus"} />
+          <QuantityButton item={item} change={'minus'} />
           {item.quantity}
-          <QuantityButton item={item} change={"plus"} />
+          <QuantityButton item={item} change={'plus'} />
         </S.CartBoxItemLine>
 
         <S.CartBoxItemLine>${item.price * item.quantity}</S.CartBoxItemLine>

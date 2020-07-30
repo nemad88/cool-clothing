@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const commonSpanStyle = css`
   padding: 0.1rem 2rem;

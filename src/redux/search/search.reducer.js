@@ -1,4 +1,4 @@
-import { SearchActionTypes } from "./search.type";
+import { SearchActionTypes } from './search.type';
 
 const INITIAL_STATE = {
   searchResult: [],

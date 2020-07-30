@@ -1,12 +1,12 @@
-import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
-import { StyledComponents as S } from "./search-result-box.styles";
+import { StyledComponents as S } from './search-result-box.styles';
 
-import { selectSearchResult } from "../../redux/search/search.selector";
+import { selectSearchResult } from '../../redux/search/search.selector';
 
-import SearchResultItem from "../search-result-item/search-result-item.component";
+import SearchResultItem from '../search-result-item/search-result-item.component';
 
 const SearchResultBox = ({ searchResult }) => {
   const result = searchResult.map((item) => {

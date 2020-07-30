@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { StyledComponents as S } from "./sign-up.styles";
+import { StyledComponents as S } from './sign-up.styles';
 
-import FormInput from "../form-input/form-input.component";
+import FormInput from '../form-input/form-input.component';
 
-import { auth, createUserProfileDocuemnt } from "../../firebase/firebase.utils";
+import { auth, createUserProfileDocuemnt } from '../../firebase/firebase.utils';
 
 const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [displayName, setDisplayName] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [displayName, setDisplayName] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -20,7 +20,7 @@ const SignUp = () => {
       setErrorMessage("Password don't match");
       return;
     } else {
-      setErrorMessage("");
+      setErrorMessage('');
     }
 
     try {
@@ -31,10 +31,10 @@ const SignUp = () => {
 
       await createUserProfileDocuemnt(user, { displayName });
 
-      setEmail("");
-      setPassword("");
-      setConfirmPassword("");
-      setDisplayName("");
+      setEmail('');
+      setPassword('');
+      setConfirmPassword('');
+      setDisplayName('');
     } catch (error) {}
   };
 

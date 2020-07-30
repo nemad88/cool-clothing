@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { ReactComponent as MagnifyIconSVG } from "../../assets/img/magnify.svg";
-import { ReactComponent as CloseIconSVG } from "../../assets/img/close.svg";
+import styled from 'styled-components';
+import { ReactComponent as MagnifyIconSVG } from '../../assets/img/magnify.svg';
+import { ReactComponent as CloseIconSVG } from '../../assets/img/close.svg';
 
 export const HeaderSearch = styled.div`
   position: relative;
@@ -10,10 +10,10 @@ export const HeaderSearch = styled.div`
   width: 100%;
   margin: 0 1rem;
 
-  input[type="search"]::-webkit-search-decoration,
-  input[type="search"]::-webkit-search-cancel-button,
-  input[type="search"]::-webkit-search-results-button,
-  input[type="search"]::-webkit-search-results-decoration {
+  input[type='search']::-webkit-search-decoration,
+  input[type='search']::-webkit-search-cancel-button,
+  input[type='search']::-webkit-search-results-button,
+  input[type='search']::-webkit-search-results-decoration {
     -webkit-appearance: none;
   }
 
