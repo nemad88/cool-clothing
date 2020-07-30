@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 
 import HeroSection from '../../components/hero/hero.component';
-import CategoriesSectionContainer from '../../components/categories-section/categories-section.container';
+import CategoriesSection from '../../components/categories-section/categories-section.component';
 import HotSection from '../../components/hot-section/hot-section.component';
 import CartBox from '../../components/cart-box/cart-box.component';
 import Modal from '../../components/modal/modal.component';
@@ -16,7 +16,7 @@ const Homepage = () => {
       <Modal />
       <CartBox />
       <HeroSection />
-      <CategoriesSectionContainer />
+      <CategoriesSection />
       <HotSection />
     </div>
   );
